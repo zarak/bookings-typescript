@@ -6,7 +6,13 @@ const Bookables: React.FunctionComponent<{bookablesByGroup: Bookable}> = ({ book
     const bookables = bookablesByGroup[group] || [];
     const bookableIndex = 0;
     return (
-        <div></div>
+        <ul className="bookables">
+            {bookables.map((b, i) => (
+                <li key={b.title} className={i == bookableIndex ? "selected" : ""}>
+                    {b.title}
+                </li>
+            ))}
+        </ul>
     );
 }
 
