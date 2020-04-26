@@ -1,9 +1,9 @@
 import React from "react";
-import { Room, Kit, Bookable, bookablesData } from '../bookablesData';
+import { Room, Kit, BookablesData, bookablesData } from '../bookablesData';
 
-const Bookables: React.FunctionComponent<{bookablesByGroup: Bookable}> = ({ bookablesByGroup }) => {
+const Bookables: React.FunctionComponent<{bookablesByGroup: BookablesData}> = ({ bookablesByGroup }) => {
     const group = "rooms";
-    const bookables = bookablesByGroup[group] || [];
+    const bookables: Array<Room> | Array<Kit> = bookablesByGroup[group] || [];
     const bookableIndex = 0;
     return (
         <ul className="bookables">

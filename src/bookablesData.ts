@@ -8,12 +8,12 @@ export type Kit = {
     notes: string,
 };
 
-export type Bookable = {
+export type BookablesData = {
     rooms: Array<Room>,
     kit: Array<Kit>
 };
 
-export const bookablesData: Bookable = {
+export const bookablesData: BookablesData = {
     rooms: [
         {
             title: "Lounge",
