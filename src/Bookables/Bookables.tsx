@@ -8,7 +8,7 @@ const Bookables: React.FunctionComponent<{bookablesByGroup: Bookable}> = ({ book
     return (
         <ul className="bookables">
             {bookables.map((b, i) => (
-                <li key={b.title} className={i == bookableIndex ? "selected" : ""}>
+                <li key={b.title} className={i == bookableIndex ? "selected" : ""} data-testid={i} >
                     {b.title}
                 </li>
             ))}
