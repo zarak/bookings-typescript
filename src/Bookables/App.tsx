@@ -6,7 +6,7 @@ import { bookablesData } from '../bookablesData';
 const App: React.FunctionComponent = () => {
   return (
     <div className="App">
-        <Bookables bookablesByGroup={bookablesData} />
+      <Bookables bookablesByGroup={bookablesData} />
     </div>
   );
 }
